@@ -1,12 +1,13 @@
-module NativeUi.Elements exposing (text, image, activityIndicator, picker, progressBar, progressView, refreshControl, scrollView, segmentedControl, slider, statusBar, switch, tabBar, textInput, toolbar, touchableHighlight, touchableOpacity, view, navigationCardStack, navigationHeader, navigationHeaderTitle)
+module NativeUi.Elements exposing (activityIndicator, image, picker, progressBar, progressView, refreshControl, scrollView, segmentedControl, slider, statusBar, switch, tabBar, text, textInput, toolbar, touchableHighlight, touchableOpacity, view)
 
 {-| elm-native-ui Elements
 
-@docs text, image, activityIndicator, picker, progressBar, progressView, refreshControl, scrollView, segmentedControl, slider, statusBar, switch, tabBar, textInput, toolbar, touchableHighlight, touchableOpacity, view, navigationCardStack, navigationHeader, navigationHeaderTitle
+@docs text, image, activityIndicator, picker, progressBar, progressView, refreshControl, scrollView, segmentedControl, slider, statusBar, switch, tabBar, textInput, toolbar, touchableHighlight, touchableOpacity, view
+
 -}
 
-import NativeUi exposing (Property, Node, customNode, node)
 import Native.NativeUi.Elements
+import NativeUi exposing (Node, Property, customNode, node)
 
 
 {-| -}
@@ -115,21 +116,3 @@ touchableOpacity =
 view : List (Property msg) -> List (Node msg) -> Node msg
 view =
     node "View"
-
-
-{-| -}
-navigationCardStack : List (Property msg) -> List (Node msg) -> Node msg
-navigationCardStack =
-    customNode "NavigationCardStack" Native.NativeUi.Elements.navigationCardStack
-
-
-{-| -}
-navigationHeader : List (Property msg) -> List (Node msg) -> Node msg
-navigationHeader =
-    customNode "NavigationHeader" Native.NativeUi.Elements.navigationHeader
-
-
-{-| -}
-navigationHeaderTitle : List (Property msg) -> List (Node msg) -> Node msg
-navigationHeaderTitle =
-    customNode "NavigationHeaderTitle" Native.NativeUi.Elements.navigationHeaderTitle
